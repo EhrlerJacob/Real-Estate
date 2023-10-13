@@ -1,8 +1,8 @@
-import axios from axios;
+import axios from 'axios';
 import {setAlert} from "./alert";
 import {
     SIGNUP_SUCCESS,
-    SINGUP_FAIL,
+    SIGNUP_FAIL,
     LOGIN_SUCCESS,
     LOGIN_FAIL,
     LOGOUT
@@ -56,7 +56,7 @@ export const signup = ({name, email, password, password2}) => async dispatch => 
         dispatch(login(email, password));
     } catch(err) {
         dispatch({
-            type: SINGUP_FAIL
+            type: SIGNUP_FAIL
         });
 
         dispatch(setAlert("Error Authenticating", "error"));

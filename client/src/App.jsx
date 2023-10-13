@@ -28,7 +28,7 @@ const App = () => (
           <Route exact path="/listings/:id" Component={ListingDetail}/>
           <Route exact path="/login" Component={Login}/>
           <Route exact path="/register" Component={Register}/>
-          <Route Component={NotFound}/>
+          <Route path="*" Component={NotFound}/>
         </Routes>
       </Layout>
     </BrowserRouter>
